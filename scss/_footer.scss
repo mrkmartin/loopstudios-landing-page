@@ -1,0 +1,150 @@
+.footer {
+  width: 100%;
+  height: 29.4375rem;
+  background-color: $black;
+  text-align: center;
+
+  @media (min-width: 48em), (orientation: landscape) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10.0625rem;
+    padding: 0 1.75rem;
+  }
+
+  @media (min-width: 62em) {
+    padding: 0 5.0625rem;
+  }
+
+  @media (min-width: 75em) {
+    padding: 0 10.1875rem;
+  }
+
+  &__logo-links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__logo {
+    @media (min-width: 48em), (orientation: landscape) {
+      margin: 0 0 1rem;
+      text-align: left;
+    }
+
+    & img {
+      width: 9.0625;
+      height: 1.75rem;
+      margin: 3.4375rem 0 2.4375rem;
+
+      @media (min-width: 48em), (orientation: landscape) {
+        margin: 0;
+      }
+    }
+  }
+
+  &__links {
+    margin-bottom: 3.0625rem;
+
+    @media (min-width: 48em), (orientation: landscape) {
+      margin: 0;
+    }
+
+    & li {
+      @media (min-width: 48em), (orientation: landscape) {
+        display: inline;
+      }
+    }
+  }
+
+  & ul {
+    list-style: none;
+  }
+
+  & li:not(:last-child) {
+    margin-bottom: 1.75rem;
+
+    @media (min-width: 48em), (orientation: landscape) {
+      margin-right: 1rem;
+    }
+  }
+
+  & a {
+    text-decoration: none;
+    color: $white;
+    font-size: 0.8125rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: $white;
+      height: 2px;
+      width: 0%;
+      left: 0;
+      bottom: -10px;
+      transition: 0.3s transform ease-in-out;
+      transform: scale(0, 1);
+    }
+
+    &:hover::after,
+    &:focus::after {
+      transform: scale(1, 1);
+      width: 100%;
+    }
+  }
+
+  &__social-copyright {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__social-media {
+    margin-bottom: 1.3125rem;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+
+    &__container {
+      position: relative;
+
+      &:not(:last-child) {
+        margin-right: 0.9375rem;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: $white;
+        height: 2px;
+        width: 0%;
+        left: 0;
+        bottom: -10px;
+        transition: 0.3s transform ease-in-out;
+        transform: scale(0, 1);
+      }
+
+      &:hover::after,
+      &:focus::after {
+        transform: scale(1, 1);
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 48em), (orientation: landscape) {
+      margin: 0 0 1.1875rem;
+      text-align: right;
+      justify-content: flex-end;
+    }
+
+    & img {
+      cursor: pointer;
+      position: relative;
+    }
+  }
+
+  &__copyright {
+    color: $veryDarkGray;
+    font-size: 0.8125rem;
+  }
+}

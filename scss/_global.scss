@@ -1,0 +1,31 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $text;
+  font-size: 0.9375rem;
+  font-weight: 400;
+}
+
+main {
+  padding: 6rem 1.5rem 0;
+  text-align: center;
+
+  @media (min-width: 62em) {
+    padding: 5.0625rem 5.0625rem 0;
+  }
+
+  @media (min-width: 75em) {
+    padding: 10.1875rem 10.1875rem 0;
+  }
+}
